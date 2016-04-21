@@ -7,7 +7,8 @@ angular.module('starter',
     'starter.directives',
     'starter.filters',
     'starter.constants',
-    'ui.router'
+    'ui.router',
+    'ngLocale'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
 
@@ -32,6 +33,16 @@ angular.module('starter',
       url:'/main/:userName',
       templateUrl: 'templates/main.html',
       controller:'MainCtrl'
+    })
+    .state('thread',{
+      url:'/thread',
+      template:'<div ui-view=""></div>',
+     // abstract:true
+    })
+    .state('thread.list',{
+      url:'/list',
+      templateUrl:'templates/threadlist.html',
+      controller:'ThreadListCtrl as vm'
     })
   $urlRouterProvider.otherwise('/login');
 

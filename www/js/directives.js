@@ -8,6 +8,7 @@ angular.module('starter.directives', [])
       require: 'ngModel',
       link: function (scope, element, attrs, ngModel) {
         var subScope = scope.$new(true);
+
         subScope.hasError = function () {
           //如果是无效格式并且用户输入过
           return ngModel.$invalid && ngModel.$dirty
@@ -15,10 +16,50 @@ angular.module('starter.directives', [])
         subScope.errors = function () {
           return ngModel.$error;
         }
-        var hint = $compile('<ul ng-if="hasError()"><li ng-repeat="(name,wrong) in errors()" ng-if="wrong">{{name|error}}</li></ul>')
+        subScope.customMessages=scope.$eval(attrs.registerFieldError);
+        var hint = $compile('<ul class="" ng-if="hasError()"><li ng-repeat="(name,wrong) in errors()" ng-if="wrong">{{name|error:customMessages}}</li></ul>')
         (subScope);
         element.after(hint);
       }
     };
   })
+  .directive('passwordFieldSame', function () {
+    return {
+      restrict: 'A',
+      require: 'ngModel',
+      link: function (scope, element, attrs, ngModel) {
+        var isSame = function (value) {
+          var anotherValue = scope.$eval(attrs.passwordFieldSame);
+          return value === anotherValue;
+        };
+        ngModel.$parsers.push(function (value) {
+          ngModel.$setValidity('same', isSame(value));
+          return isSame(value) ? value : undefined;
+        });
+        scope.$watch(
+          function () {
+            return scope.$eval(attrs.passwordFieldSame);
+          },
+          function () {
+            ngModel.$setValidity('same', isSame(ngModel.$modelValue));
+          }
+        );
+      }
+    }
+  })
+  .directive('imageCaptcha', function () {
+    return{
+      restrict:'A',
+      link: function (scope,elemet) {
+        var changeSrc= function () {
+          elemet.attr('src','/img/captcha.jpg?random='+new Date().getTime());
+          changeSrc();
+          elemet.on('click', function () {
+            changeSrc();
+          });
+        }
+      }
+    }
+  })
+
 ;

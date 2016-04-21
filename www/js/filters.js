@@ -3,11 +3,23 @@
  */
 angular.module('starter.filters', [])
   .filter('error', function (Errors) {
-    var message = {
-      email: '不是有效的邮件地址',
-      required: '此项不能为空'
+
+    return function (name, customMessages) {
+      var errors = angular.extend({}, Errors, customMessages)
+      return errors[name] || name;
     };
-    return function (name) {
-      return Errors[name] || name;
-    }
   })
+  .filter('page',function () {
+  return function (input, page, pagesize) {
+    if (!input) {
+      return input;
+    }
+    if (page < 0 || pagesize <= 0) {
+      return [];
+    }
+    var start = page * pagesize;
+    var end = (page + 1) * pagesize;
+    return input.slice(start, end);
+  };
+})
+;
