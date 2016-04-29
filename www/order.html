@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>申请退款</title>
+
+  <script src="http://js.soufunimg.com/zbs/newhouse/js/flexible_css.debug.js"></script>
+  <script src="http://js.soufunimg.com/zbs/newhouse/js/flexible.debug.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/StyleReturn.css" rel="stylesheet">
+  <style>
+    .ulNormal li .ulNormalRInput {
+      width: 5.6rem;
+      height: 100%;
+      border: none;
+      text-align: right;
+      margin-right: 0.56rem;
+      font-size: 0.37333rem;
+      color: #999;
+    }
+    .clearfix {
+      zoom:normal;
+    }
+    article{
+      display: block;
+    }
+
+    .mt_content {
+      width: 100%;
+      position: absolute;
+      top: 1.17333rem;
+      bottom: 0;
+      overflow: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+
+
+  </style>
+</head>
+<body>
+<article class="bodyIn">
+    <header class="top_nav">
+      <!-- 顶部导航左侧样式 -->
+      <div class="top_nav_left">
+        <a class="top_left" href="javascript:history.go(-1);"></a>
+      </div>
+      <!-- 顶部导航中间样式 -->
+      <div class="top_nav_mid">
+        <p>申请退款</p>
+      </div>
+    </header>
+    <article class="mt_content">
+      <article class="detailsPageT haveRefund">
+        <div class="dPageCoupons">
+          <ul class="couponDetails">
+            <li>
+              <a href="#" class="clearfix">
+                <div class="couponDetL">
+                  <dl>
+                    <dt><em>￥</em>5万</dt>
+                    <dd>实际金额:<em>0.10</em></dd>
+                  </dl>
+                  <div></div>
+                </div>
+                <div class="couponDetR">
+                  <dl>
+                    <dt>天津富力新城房票</dt>
+                    <dd>适用条件：通用</dd>
+                  </dl>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="refund">申请退款金额：<span style="color: #cc3333"><em>￥</em>0.10</span></div>
+      </article>
+      <article class="refundWay">
+        <div class="refundWayTop">
+          <div>退款方式</div>
+          <dl>
+            <dt>提交银行卡</dt>
+            <dd>(开发商审核通过后，退款将打入您提交的银行卡上）</dd>
+          </dl>
+        </div>
+        <ul class="ulNormal mt0 clearfix">
+          <li class="clearfix">
+            <em>*</em>
+            <span class="ulNormalL">收款人姓名</span>
+            <input type="text" class="ulNormalRInput" id="skr" />
+          </li>
+          <li class="clearfix">
+            <em>*</em>
+            <span class="ulNormalL">银行卡卡号</span>
+            <input type="text" class="ulNormalRInput" id="yhk" />
+          </li>
+          <li class="clearfix">
+            <em>*</em>
+            <span class="ulNormalL">开户银行</span>
+            <input type="text" class="ulNormalRInput" id="khyh" />
+          </li>
+          <li class="clearfix">
+            <em>*</em>
+            <span class="ulNormalL">开户城市</span>
+            <input type="text" class="ulNormalRInput" id="khcs" value="" />
+          </li>
+        </ul>
+        <div class="refundWayBot mt20">
+          <div>退款原因</div>
+          <textarea placeholder="请输入原因，限10个字符！" maxlength="10" id="tkyy"></textarea>
+        </div>
+
+      </article>
+      <a href="#" class="mt20" style="height: 1.17333rem; line-height: 1.17333rem; font-size: 0.48rem; text-align: center; color: #fff; background-color: #c33; display: block;" id="btnss">提交申请
+      </a>
+    </article>
+
+    <article class="submitTip none">
+      <div class="submitSuc red_bg" style="color: #c33;">提交成功，请耐心等待开发商审核！</div>
+      <a href="/mycouponlist/index.html" class="promptBigBtn" style="background-color: #c33;">我知道了
+      </a>
+    </article>
+
+
+</article>
+</body>
+</html>
+

@@ -44,6 +44,11 @@ angular.module('starter',
       templateUrl:'templates/threadlist.html',
       controller:'ThreadListCtrl as vm'
     })
+    .state("tree",{
+      url:'/tree',
+      templateUrl:'templates/tree.html',
+      controller:'ThreadTreeCtrl as vm'
+    })
   $urlRouterProvider.otherwise('/login');
 
 });

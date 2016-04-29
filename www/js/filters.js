@@ -22,4 +22,10 @@ angular.module('starter.filters', [])
     return input.slice(start, end);
   };
 })
+  .filter('tree', function (tree) {
+    return function(items,childrenName){
+      tree.enhance(items,childrenName);
+      return items;
+    };
+  })
 ;

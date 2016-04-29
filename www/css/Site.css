@@ -1,0 +1,533 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-size: 12px;
+    color: #555555;
+    font-family: Arial,'宋体';
+    letter-spacing: 0px;
+    line-height: 20px;
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    overflow: auto;
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    border: 0px;
+    vertical-align: middle;
+}
+
+a:link {
+    color: #555555;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color: #555555;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #555555;
+    background-color: #e3f2f6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:active {
+    color: #555555;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    height: 25px;
+    width: 75px;
+}
+
+input[type=button] {
+    height: 25px;
+    width: 75px;
+}
+
+button {
+    height: 25px;
+    width: 75px;
+}
+
+input[type=text] {
+    border: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    height: 15px;
+    padding: 3px 5px 3px 5px;
+    background-color: #FFFFFF;
+}
+
+input[type=password] {
+    border: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    height: 15px;
+    padding: 3px 5px 3px 5px;
+    background-color: #FFFFFF;
+}
+
+select {
+    border: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: 3px;
+    background-color: #FFFFFF;
+}
+
+table tr {
+    height: 16px;
+}
+
+table td {
+    padding-right: 5px;
+}
+
+fieldset {
+    margin: 5px;
+    padding: 5px;
+}
+
+legend {
+    font-weight: 800;
+    color: #555555;
+}
+
+.slfullscreenbutton {
+    background-image: url("/Resource/Image/Enlarge.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 35px;
+    width: 35px;
+    z-index: 999999;
+    cursor: pointer;
+}
+
+.slmenu {
+    padding: 3px 3px 3px 3px;
+}
+
+.slnavigation {
+    font-weight: 900;
+}
+
+.slbusyboxloading {
+    display: none;
+    border: 1px;
+    border-style: solid;
+    border-color: #333333;
+    padding: 3px;
+    width: 150px;
+    height: 18px;
+    background-color: #E8DA99;
+    text-align: center;
+    z-index: 99999;
+}
+
+.sltextbox {
+    width: 150px;
+}
+
+.slbutton {
+    width: 60px;
+}
+
+.sltabsheader span.ui-icon {
+    margin-right: -7px;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.slconfigPart {
+    position: fixed;
+    _position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 99999;
+}
+
+.sloperatePart {
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    _position: absolute; /*ie6 */
+    /*_top: expression(eval(document.documentElement.scrollTop));*/
+}
+
+.sltoolbarPart {
+    background-color: #e3f2f6;
+    width: 100%;
+    height: 25px;
+}
+
+.slparameterPart {
+    background-color: white;
+    width: 100%;
+}
+
+.slsplitLinePart {
+    width: 98%;
+    border: 0px;
+    border-bottom: 2px solid #333333;
+}
+
+.slshowPart {
+    padding: 3px;
+}
+
+.slfuncTag {
+    display: inline-block;
+    *display: inline; /* 只有ie6和ie7识别*/
+    zoom: 1; /* 触发ie6和ie7下的haslayout */
+    font-size: 12px;
+    width: 50px;
+    vertical-align: top;
+    margin-top: 30px;
+}
+
+.slshowPart textarea {
+    overflow: auto;
+}
+
+.slexpandShrink {
+    display: inline-block;
+    *display: inline; /* 只有ie6和ie7识别*/
+    height: 20px;
+    width: 20px;
+    z-index: 999999;
+    cursor: pointer;
+    border-style: none;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+
+.slexpandShrink-expand {
+    background-image: url("/Resource/Image/Down.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.slexpandShrink-shrink {
+    background-image: url("/Resource/Image/Up.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.slpager {
+    border: 1px;
+    border-style: solid;
+    border-color: #D4D0C8;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    background-color: #EAE8E4;
+}
+
+.sldatafix {
+    border: 1px;
+    border-style: solid;
+    border-color: #D4D0C8;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sldatatablefix {
+    width: 100%;
+}
+
+.sldatatableheaderfix {
+    background-color: #EAE8E4;
+}
+
+    .sldatatableheaderfix td {
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #ADB9CD;
+    }
+
+.sldata {
+    height: 310px;
+    border: 1px;
+    border-style: solid;
+    border-color: #D4D0C8;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sldatatable {
+    width: 100%;
+}
+
+.sldatatabletemplate {
+    display: none;
+}
+
+.sldatatablerow {
+}
+
+    .sldatatablerow td {
+        text-align: center;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: #ADB9CD;
+    }
+
+.sladdcondition {
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 25px;
+    padding-left: 10px;
+    background-color: #FFF3CD;
+}
+
+.slremovecondition {
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 25px;
+    padding-left: 10px;
+    background-color: #FFF3CD;
+}
+
+.slconditiontemplate {
+    display: none;
+}
+
+.slconditionfield {
+    float: left;
+    width: 70px;
+    height: 25px;
+    background-color: #FFF3CD;
+}
+
+.slconditiontype {
+    float: left;
+    padding-left: 5px;
+}
+
+    .slconditiontype select {
+        height: 25px;
+    }
+
+.slconditionvalue {
+    float: left;
+    padding-left: 5px;
+}
+
+.sloptionalcondition {
+    float: left;
+    width: 30%;
+    height: 300px;
+    background-color: #FFFFFF;
+}
+
+    .sloptionalcondition fieldset {
+        width: 85%;
+        height: 92%;
+    }
+
+.slchoicecondition {
+    float: right;
+    clear: right;
+    width: 70%;
+    height: 300px;
+    background-color: #FFFFFF;
+}
+
+    .slchoicecondition fieldset {
+        width: 93%;
+    }
+
+.sladdorder {
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 25px;
+    padding-left: 10px;
+    background-color: #FFF3CD;
+}
+
+.slremoveorder {
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 25px;
+    padding-left: 10px;
+    background-color: #FFF3CD;
+}
+
+.slordertemplate {
+    display: none;
+}
+
+.slorderfield {
+    float: left;
+    width: 70px;
+    height: 25px;
+    background-color: #FFF3CD;
+}
+
+.slordertype {
+    float: left;
+    padding-left: 5px;
+}
+
+    .slordertype select {
+        height: 25px;
+    }
+
+.slordervalue {
+    float: left;
+    padding-left: 5px;
+}
+
+.sloptionalorder {
+    float: left;
+    width: 30%;
+    height: 300px;
+    background-color: #FFFFFF;
+}
+
+    .sloptionalorder fieldset {
+        width: 85%;
+        height: 92%;
+    }
+
+.slchoiceorder {
+    float: right;
+    clear: right;
+    width: 70%;
+    height: 300px;
+    background-color: #FFFFFF;
+}
+
+    .slchoiceorder fieldset {
+        width: 93%;
+        height: 92%;
+    }
+
+.sluporder {
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 25px;
+    padding-left: 10px;
+    background-color: #FFF3CD;
+}
+
+.sldownorder {
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 25px;
+    padding-left: 10px;
+    background-color: #FFF3CD;
+}
+
+.slchartcontainer {
+    border: 1px;
+    border-style: solid;
+    border-color: #e3f2f6;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.slchart {
+    float: left;
+}
+
+.sltinytableheader {
+    background-color: #E3EEFB;
+    height: 30px;
+    text-align: center;
+}
+
+.sltabsheader span.ui-icon {
+    margin-right: -7px;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.slpager {
+    border: 1px;
+    border-style: solid;
+    border-color: #D4D0C8;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    background-color: #EAE8E4;
+}
+
+.sldatafix {
+    border: 1px;
+    border-style: solid;
+    border-color: #D4D0C8;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sldatatablefix {
+    width: 100%;
+}
+
+.sldatatableheaderfix {
+    background-color: #EAE8E4;
+}
+
+    .sldatatableheaderfix td {
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #ADB9CD;
+    }
+
+.sldata {
+    height: 310px;
+    border: 1px;
+    border-style: solid;
+    border-color: #D4D0C8;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sldatatable {
+    width: 100%;
+}
+
+.sldatatabletemplate {
+    display: none;
+}
+
+.sldatatablerow {
+}
+
+    .sldatatablerow td {
+        text-align: center;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: #ADB9CD;
+    }
